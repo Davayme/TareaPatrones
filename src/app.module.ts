@@ -1,9 +1,22 @@
 import { Module } from '@nestjs/common';
-import { PersonaModule } from './persona/persona.module';
-
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { MetodoPagoModule } from './metodo-pago/metodo-pago.module';
 
 @Module({
-  imports: [PersonaModule],
+  imports: [
+/*     TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: 'root',
+      database: 'patrones',
+      entities: [],
+      synchronize: true,
+      logging: true,
+    }), */
+
+  MetodoPagoModule],
   controllers: [],
   providers: [],
 })
