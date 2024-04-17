@@ -11,6 +11,7 @@ export class MetodoPagoController {
   processPayment(@Body('method') method: 'creditCard' | 'paypal', @Body('amount') amount: number) {
     return this.metodoPagoService.processPayment(method, amount);
   }
+  
   @Get()
   findAll() {
     return this.metodoPagoService.findAll();
